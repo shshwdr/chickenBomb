@@ -1,0 +1,143 @@
+{
+    "m_SelectedDeviceId": "902033402467",
+    "m_SelectedPackage": {
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 14128,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 16592,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 31001,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 32253,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 3409,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.sprouted",
+            "processId": 22513,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.sprouted",
+            "processId": 31231,
+            "exited": false
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 30109,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 30540,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 8596,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.microsoft.launcher",
+            "processId": 5255,
+            "exited": false
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 17429,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.taptap",
+            "processId": 17935,
+            "exited": true
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}
