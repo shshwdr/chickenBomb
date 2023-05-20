@@ -16,6 +16,11 @@ public class PlayerMovement : SerializableObject
     float verticalMove = 0f;
     Vector2 movement;
     bool jump = false;
+    public Transform cameraTrans;
+    public float cameraSpeed;
+    public float cameraMoveMax = 5;
+    public float cameraMoveMin= -5;
+    float cameraOriginY;
     bool crouch = false;
     //public GameObject gameOverUI;
     public bool isDead;
@@ -54,6 +59,7 @@ public class PlayerMovement : SerializableObject
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         EventPool.OptIn("clickGameOver", GameoverRespawn);
+        cameraOriginY = cameraTrans.localPosition.y;
     }
 
 
@@ -165,23 +171,42 @@ public class PlayerMovement : SerializableObject
 
 
         float speed = Mathf.Abs(horizontalMove);
-        if (isUnderground)
-        {
-            speed = Mathf.Abs(horizontalMove) + Mathf.Abs(verticalMove);
-            movement.x = horizontalMove;
-            movement.y = verticalMove;
-
-            movement = Vector2.ClampMagnitude(movement, 1);
-        }
+        // if (isUnderground)
+        // {
+        //     speed = Mathf.Abs(horizontalMove) + Mathf.Abs(verticalMove);
+        //     movement.x = horizontalMove;
+        //     movement.y = verticalMove;
+        //
+        //     movement = Vector2.ClampMagnitude(movement, 1);
+        // }
         if (speed >= 0.01)
         {
             hideTutorial(0);
         }
         animator.SetFloat("speed", speed);
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+        if ( Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
         };
+        
+        float verticalInput = Input.GetAxis("Vertical");
+        if (verticalInput != 0)
+        {
+            Vector3 newPosition = cameraTrans.localPosition;
+            newPosition.y += verticalInput * cameraSpeed * Time.deltaTime;
+            newPosition.y = Mathf.Clamp(newPosition.y, cameraMoveMin,cameraMoveMax);
+            cameraTrans.localPosition = newPosition;
+        }
+        else
+        {
+            Vector3 newPosition = cameraTrans.localPosition;
+            var ydiff = cameraOriginY - newPosition.y;
+            if (Mathf.Abs(ydiff) > 0.1f)
+            {
+                newPosition.y += ydiff * cameraSpeed * Time.deltaTime;
+                cameraTrans.localPosition = newPosition;
+            }
+        }
         //if (Input.GetButtonDown("Crouch"))
         //{
         //    crouch = true;

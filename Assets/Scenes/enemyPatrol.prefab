@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9101691380709435406}
   - component: {fileID: 9101691380709435407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyPatrol
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9101691381694564803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9101691382110088390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9101691382110088389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.97, y: -0.17, z: 0}
+  m_LocalPosition: {x: -2.47, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9101691380709435406}
@@ -120,6 +120,10 @@ PrefabInstance:
     - target: {fileID: 208375693255423352, guid: 716789be1b4e18242b6ccb69b77fdbe2, type: 3}
       propertyPath: m_Name
       value: enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 208375693255423352, guid: 716789be1b4e18242b6ccb69b77fdbe2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 208375693255423353, guid: 716789be1b4e18242b6ccb69b77fdbe2, type: 3}
       propertyPath: m_RootOrder

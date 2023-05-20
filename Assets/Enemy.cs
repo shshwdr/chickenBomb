@@ -38,6 +38,11 @@ public class Enemy : MonoBehaviour
     //
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (GetComponent<HPObject>().isDead)
+        {
+            return;
+        }
         if (collision.GetComponent<Player>())
         {
             collision.GetComponent<Player>().kill();
