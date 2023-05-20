@@ -36,13 +36,14 @@ public class Enemy : MonoBehaviour
     //     }
     // }
     //
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.GetComponent<PlayerMovement>())
-    //     {
-    //         //AudioManager.Instance.playInsect();
-    //     }
-    // }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Player>())
+        {
+            collision.GetComponent<Player>().kill();
+            //AudioManager.Instance.playInsect();
+        }
+    }
     //
     // private void OnTriggerExit2D(Collider2D collision)
     // {

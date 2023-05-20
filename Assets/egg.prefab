@@ -9673,12 +9673,12 @@ MonoBehaviour:
   StampExclude: {fileID: 0}
   StampPaint: 2
   StampShape:
-    Color: {fileID: 2800000, guid: d5fe3dcf4b34a1341b1a3f5213c25426, type: 3}
-    Alpha: {fileID: 2800000, guid: fef0ca7c77c683d4da0b22b25f9ed8ad, type: 3}
+    Color: {fileID: 2800000, guid: 38ee88b62dc0a9141afa85d32b9ed83b, type: 3}
+    Alpha: {fileID: 2800000, guid: cb7df3a3a6a13d340b067f6033b80ac1, type: 3}
   StampColorShape: {fileID: 0}
   StampAlphaShape: {fileID: 0}
   StampColor: {r: 1, g: 1, b: 1, a: 1}
-  StampSize: {x: 6, y: 6}
+  StampSize: {x: 12, y: 12}
   StampRandomDirection: 1
   Raycast: 1
   RaycastRadius: 4

@@ -60,37 +60,37 @@ public class PlayerMovement : SerializableObject
 
     public override void Save(SerializedGame save)
     {
-        if (isDead)
-        {
-            
-            prepareSpawnSelection();
-            save.playerPosition = activePositions[currentSpawnPoint].transform.position;
-        }
-        else
-        {
-            save.playerPosition = new SerializedVector(transform.position);
-        }
-        save.isPlayerUnderground = isUnderground;
-        save.isTutorialHidden = isTutorialHidden;
+        // if (isDead)
+        // {
+        //     
+        //     prepareSpawnSelection();
+        //     save.playerPosition = activePositions[currentSpawnPoint].transform.position;
+        // }
+        // else
+        // {
+        //     save.playerPosition = new SerializedVector(transform.position);
+        // }
+        // save.isPlayerUnderground = isUnderground;
+        // save.isTutorialHidden = isTutorialHidden;
     }
 
     public override void Load(SerializedGame save)
     {
-        transform.position = save.playerPosition.GetPos();
-        isUnderground = save.isPlayerUnderground;
-        colliderTopdown.enabled = isUnderground;
-        animator.SetBool("underground", isUnderground);
-        if (isUnderground)
-        {
-            FModSoundManager.Instance.SetParam("Underground", 0.96f);
-            GetComponent<Rigidbody2D>().gravityScale = 0;
-        }
-        isTutorialHidden = save.isTutorialHidden;
-        if (isTutorialHidden)
-        {
-            hideTutorial(0);
-            hideTutorial(1);
-        }
+        // transform.position = save.playerPosition.GetPos();
+        // isUnderground = save.isPlayerUnderground;
+        // colliderTopdown.enabled = isUnderground;
+        // animator.SetBool("underground", isUnderground);
+        // if (isUnderground)
+        // {
+        //     FModSoundManager.Instance.SetParam("Underground", 0.96f);
+        //     GetComponent<Rigidbody2D>().gravityScale = 0;
+        // }
+        // isTutorialHidden = save.isTutorialHidden;
+        // if (isTutorialHidden)
+        // {
+        //     hideTutorial(0);
+        //     hideTutorial(1);
+        // }
     }
 
     void GameoverRespawn()
@@ -106,33 +106,33 @@ public class PlayerMovement : SerializableObject
         //{
         //    isCheat = true;
         //}
-        if (isDead)
+        if (isDead || GetComponent<Player>().isDead)
         {
-            if (isFullyDead)
-            {
-                //Respawn();
-                if (Input.GetKeyDown(KeyCode.R) && !isSelectingSpawnPoint)
-                {
-                    SelectSpawnPoint();
-                }
-                if (isSelectingSpawnPoint)
-                {
-                    if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-                    {
-                        currentSpawnPoint++;
-                        updateCamera();
-                    }
-                    if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-                    {
-                        currentSpawnPoint--;
-                        updateCamera();
-                    }
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        Respawn();
-                    }
-                }
-            }
+            // if (isFullyDead)
+            // {
+            //     //Respawn();
+            //     if (Input.GetKeyDown(KeyCode.R) && !isSelectingSpawnPoint)
+            //     {
+            //         SelectSpawnPoint();
+            //     }
+            //     if (isSelectingSpawnPoint)
+            //     {
+            //         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            //         {
+            //             currentSpawnPoint++;
+            //             updateCamera();
+            //         }
+            //         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            //         {
+            //             currentSpawnPoint--;
+            //             updateCamera();
+            //         }
+            //         if (Input.GetKeyDown(KeyCode.Space))
+            //         {
+            //             Respawn();
+            //         }
+            //     }
+            // }
             
             return;
         }
