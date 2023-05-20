@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : HPObject
 {
 
     public float moveRadius;
@@ -12,6 +13,14 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    public override void kill()
+    {
+        
+        transform.DOKill();
+        base.kill();
+
     }
 
     // Update is called once per frame
