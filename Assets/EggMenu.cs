@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EggMenu:MonoBehaviour
@@ -16,11 +17,11 @@ public class EggMenu:MonoBehaviour
     public void update(int used, int maxCount)
     {
         int i = 0;
-        for (; i < maxCount - used-1; i++)
+        for (; i < math.min(eggCells.Length, maxCount - used); i++)
         {
             eggCells[i].show(true); 
         }
-        for (; i < maxCount; i++)
+        for (; i < math.min(eggCells.Length,maxCount); i++)
         {
             eggCells[i].show(false); 
         }

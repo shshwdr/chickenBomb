@@ -272,7 +272,7 @@ public class PlayerMovement : SerializableObject
                 if (characterController.footstepTimer > characterController.footstepTime)
                 {
                     characterController.OnStepEvent.Invoke();
-                    characterController.footStepEmitter.Play();
+                   // characterController.footStepEmitter.Play();
                     characterController.footstepTimer = 0;
                 }
 
@@ -292,7 +292,7 @@ public class PlayerMovement : SerializableObject
     {
         isFullyDead = true;
 
-        controller.footStepParamChanger.TriggerParameters();
+        //controller.footStepParamChanger.TriggerParameters();
     }
 
 

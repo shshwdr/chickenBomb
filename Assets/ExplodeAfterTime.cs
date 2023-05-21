@@ -33,6 +33,8 @@ public class ExplodeAfterTime : MonoBehaviour
         {
             return;
         }
+        
+        sfxManager.Instance.play(sfxManager.Instance.bomb);
         hasExploded = true;
 
         var go= Instantiate(explodeCollider,transform.position,quaternion.identity);

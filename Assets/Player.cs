@@ -25,7 +25,10 @@ public class Player : HPObject
         {
             
             Invoke("restartGame",1);
+            
+            sfxManager.Instance.play(sfxManager.Instance.chickenDie);
         }
+        
         base.kill();
     }
 

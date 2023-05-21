@@ -1,6 +1,4 @@
 ﻿using DG.Tweening;
-using FMOD.Studio;
-using FMODUnity;
 using TreeEditor;
 using Unity.Mathematics;
 using UnityEngine;
@@ -47,8 +45,8 @@ public class CharacterController2D : MonoBehaviour
 	public UnityEvent OnLandEvent;
 	public UnityEvent OnStepEvent;
 
-	public StudioEventEmitter footStepEmitter;
-	public StudioParameterTrigger footStepParamChanger;
+	//public StudioEventEmitter footStepEmitter;
+	//public StudioParameterTrigger footStepParamChanger;
 	public float footStepMakeSoundMinDistance = 0.3f;
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -78,7 +76,7 @@ public class CharacterController2D : MonoBehaviour
 
 	public void changeParamByName(string paramName,float paramValue)
 	{
-		footStepEmitter.SetParameter(paramName, paramValue);
+		//footStepEmitter.SetParameter(paramName, paramValue);
 	}
 
 	private void FixedUpdate()
@@ -98,7 +96,7 @@ public class CharacterController2D : MonoBehaviour
                 {
 
 					OnLandEvent.Invoke();
-					footStepEmitter.Play();
+					//footStepEmitter.Play();
 				}
 			}
 		}
@@ -108,7 +106,7 @@ public class CharacterController2D : MonoBehaviour
 			if (footstepTimer > footstepTime)
 			{
 				OnStepEvent.Invoke();
-				footStepEmitter.Play();
+				//footStepEmitter.Play();
 				footstepTimer = 0;
 				footstepTime = Random.Range(footstepTimeMin, footstepTimeMax);
 			}
@@ -203,6 +201,7 @@ public class CharacterController2D : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump && GameManager.Instance. eggUsedCount<GameManager.Instance.maxEggCount)
 		{
+			sfxManager.Instance.play(sfxManager.Instance.layEgg);
 			GameManager.Instance.useEgg();
 			AudioManager.Instance.playJump();
 			animator.SetBool("jump", true);

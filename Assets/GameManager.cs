@@ -19,6 +19,10 @@ public class GameManager : Singleton<GameManager>
     public void returnEgg()
     {
         eggUsedCount--;
+        if (eggUsedCount < 0)
+        {
+            eggUsedCount = 0;
+        }
         if (GameObject.FindObjectOfType<EggMenu>())
         {
             
