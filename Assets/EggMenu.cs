@@ -16,7 +16,7 @@ public class EggMenu:MonoBehaviour
     public void update(int used, int maxCount)
     {
         int i = 0;
-        for (; i < maxCount - used; i++)
+        for (; i < maxCount - used-1; i++)
         {
             eggCells[i].show(true); 
         }

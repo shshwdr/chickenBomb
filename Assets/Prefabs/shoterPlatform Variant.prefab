@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587968, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Size.y
-      value: 3.8799999
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587968, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Offset.x
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587968, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -0.307
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587968, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587970, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: 9.33
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587970, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587970, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_LocalPosition.z
@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 91a2c6348f556e24c87d1a816717d299, type: 3}
     - target: {fileID: 6391437328491587998, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Name
-      value: shoterPlatform
+      value: lowerPlatform (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8452802657237429857, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_LocalPosition.y

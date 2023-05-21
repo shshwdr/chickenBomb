@@ -6,6 +6,7 @@ using UnityEngine;
 
     public class HPObject : MonoBehaviour
     {
+        public bool canBeKilled = true;
         public float rotateTime = 0.3f;
         public bool isDead;
 
@@ -21,6 +22,10 @@ using UnityEngine;
 
         public virtual void kill()
         {
+            if (!canBeKilled)
+            {
+                return;
+            }
             if (!isDead)
             {
                 isDead = true;

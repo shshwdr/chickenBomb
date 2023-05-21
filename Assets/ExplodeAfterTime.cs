@@ -42,7 +42,7 @@ public class ExplodeAfterTime : MonoBehaviour
 
         foreach (var collider in colliders)
         {
-            if (collider.GetComponent<HPObject>())
+            if (collider.GetComponent<HPObject>() && collider.GetComponent<HPObject>().canBeKilled)
             {
                 collider.GetComponent<HPObject>().kill();
             }

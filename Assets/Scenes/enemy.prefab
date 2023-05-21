@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 208375693255423358}
   - component: {fileID: 208375693255423359}
   - component: {fileID: 208375693255423357}
-  - component: {fileID: 208375693255423356}
   m_Layer: 7
   m_Name: enemy
   m_TagString: enemy
@@ -117,17 +116,3 @@ MonoBehaviour:
   isDead: 0
   moveRadius: 0
   moveSpeed: 0
---- !u!114 &208375693255423356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208375693255423352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b6c23827f13d9e4cbcbf29e068c27a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateTime: 0.3
-  isDead: 0
