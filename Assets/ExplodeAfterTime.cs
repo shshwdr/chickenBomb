@@ -13,6 +13,7 @@ public class ExplodeAfterTime : MonoBehaviour
     public float radius;
 
     public LayerMask layerMask;
+    public LayerMask destroyLayerMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,16 @@ public class ExplodeAfterTime : MonoBehaviour
             {
                 collider.GetComponent<HPObject>().kill();
             }
+            
+        }
+        
+        
+        Collider2D[] colliders2 = Physics2D.OverlapCircleAll(transform.position, radius, destroyLayerMask);
+
+        foreach (var collider in colliders2)
+        {
+            Destroy( collider.gameObject);
+
         }
     }
     // Update is called once per frame

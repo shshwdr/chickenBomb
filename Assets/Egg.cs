@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -33,5 +34,10 @@ public class Egg : MonoBehaviour
             }
 
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.returnEgg();
     }
 }

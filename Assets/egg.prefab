@@ -9680,8 +9680,8 @@ MonoBehaviour:
   StampColor: {r: 1, g: 1, b: 1, a: 1}
   StampSize: {x: 10, y: 10}
   StampRandomDirection: 1
-  Raycast: 0
-  RaycastRadius: 0
+  Raycast: 1
+  RaycastRadius: 10
   RaycastCount: 32
   ForcePerRay: 150
   DamagePerRay: 1
@@ -9988,3 +9988,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 640
+  destroyLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096

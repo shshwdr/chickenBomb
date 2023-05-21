@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2598934914153937513, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211366711957403309, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587968, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Size.x
       value: 12.067811
@@ -85,7 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6391437328491587998, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_Name
-      value: platformer shoter
+      value: platformer-shorter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698395738648739971, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8452802657237429857, guid: b2adc5261e37671459bf7e8495e9a896, type: 3}
       propertyPath: m_LocalPosition.x

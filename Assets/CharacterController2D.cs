@@ -16,7 +16,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
-	float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 
 	public GameObject egg;
@@ -80,10 +80,6 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (eggTimer > 0)
-		{
-			eggTimer -= Time.deltaTime;
-		}
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -183,22 +179,20 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump && eggTimer<=0)
+		if (m_Grounded && jump && GameManager.Instance. eggUsedCount<GameManager.Instance.maxEggCount)
 		{
+			GameManager.Instance.useEgg();
 			AudioManager.Instance.playJump();
 			animator.SetBool("jump", true);
 			// Add a vertical force to the player.
 			//m_Grounded = false;
 			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			transform.position = transform.position + Vector3.up * 1.2f;
+			transform.position = transform.position + Vector3.up * 1.4f;
 			//m_Rigidbody2D.MovePosition(transform.position+Vector3.up*2);
 			Instantiate(egg, transform.position- Vector3.up * 1.2f, quaternion.identity);
-			eggTimer = eggTime;
 		}
 	}
 
-	public float eggTime = 0.3f;
-	public float eggTimer = 0;
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.

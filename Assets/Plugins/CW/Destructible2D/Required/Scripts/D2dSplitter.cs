@@ -10,6 +10,7 @@ namespace Destructible2D
 	[RequireComponent(typeof(D2dDestructible))]
 	[HelpURL(D2dCommon.HelpUrlPrefix + "D2dSplitter")]
 	[AddComponentMenu(D2dCommon.ComponentMenuPrefix + "Splitter")]
+	
 	public class D2dSplitter : MonoBehaviour
 	{
 		public struct Pixel

@@ -474,6 +474,12 @@ namespace Destructible2D
 		public void SplitBegin()
 		{
 			splitDestructibles.Clear();
+			
+			if (transform.Find("Static Sprite"))
+			{
+				
+				transform.Find("Static Sprite").gameObject.SetActive(false);
+			}
 
 			if (OnSplitStart != null)
 			{

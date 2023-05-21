@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -42,7 +42,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -72,7 +72,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -102,7 +102,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -132,7 +132,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPositions
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -304,11 +304,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flower:
-  - {fileID: 1831362551688229373, guid: 1c4f96e23184f2b4baa9eeca72fec2ae, type: 3}
-  - {fileID: 1831362551688229373, guid: 08def218d339c9a499daeefd29943146, type: 3}
-  - {fileID: 1831362551688229373, guid: 2e7ef2233f371334d998080a09126036, type: 3}
-  - {fileID: 1831362551688229373, guid: 17e21c4d2d7aab4498fcb4df6f756bfa, type: 3}
-  - {fileID: 1831362551688229373, guid: a08889e68e109c34bb584118caf8b929, type: 3}
+  - {fileID: 8720087312341345482, guid: dd000d2552db85540aa21c1a1c17ecf2, type: 3}
+  - {fileID: 8720087312341345482, guid: 82791476753a6414295567102ccd202f, type: 3}
+  - {fileID: 8720087312341345482, guid: 83d27afb128eda840986b09498d83c6e, type: 3}
+  - {fileID: 8720087312341345482, guid: 5a0064953f4fd79449da5e84a20b121b, type: 3}
+  - {fileID: 8720087312341345482, guid: 4ac2225c0654090409a003b0bfe57056, type: 3}
   flowerPositionParent: {fileID: 4211366711957403309}
 --- !u!1 &7698395738648739971
 GameObject:
@@ -322,7 +322,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -352,7 +352,7 @@ GameObject:
   m_Layer: 6
   m_Name: flowerPosition (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

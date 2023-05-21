@@ -113,12 +113,12 @@ namespace Destructible2D.Examples
 							strength -= hit.fraction;
 						}
 
-						if (rigidbody2D != null)
-						{
-							var force = direction * ForcePerRay * strength;
-
-							rigidbody2D.AddForceAtPosition(force, hit.point);
-						}
+						// if (rigidbody2D != null)
+						// {
+						// 	var force = direction * ForcePerRay * strength;
+						//
+						// 	rigidbody2D.AddForceAtPosition(force, hit.point);
+						// }
 
 						if (damage != null)
 						{
