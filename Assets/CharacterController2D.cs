@@ -80,6 +80,10 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (eggTimer > 0)
+		{
+			eggTimer -= Time.deltaTime;
+		}
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -179,20 +183,22 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (m_Grounded && jump && eggTimer<=0)
 		{
 			AudioManager.Instance.playJump();
 			animator.SetBool("jump", true);
 			// Add a vertical force to the player.
 			//m_Grounded = false;
 			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			transform.position = transform.position + Vector3.up * 1;
+			transform.position = transform.position + Vector3.up * 1.2f;
 			//m_Rigidbody2D.MovePosition(transform.position+Vector3.up*2);
-			Instantiate(egg, transform.position- Vector3.up * 1, quaternion.identity);
+			Instantiate(egg, transform.position- Vector3.up * 1.2f, quaternion.identity);
+			eggTimer = eggTime;
 		}
 	}
 
-
+	public float eggTime = 0.3f;
+	public float eggTimer = 0;
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.

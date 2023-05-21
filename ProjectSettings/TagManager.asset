@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 2562054871
+    locked: 0
   - name: SceneObj
     uniqueID: 2840010165
     locked: 0
@@ -51,4 +54,7 @@ TagManager:
     locked: 0
   - name: InFrontOfPlayer
     uniqueID: 3567936145
+    locked: 0
+  - name: Light
+    uniqueID: 2787178863
     locked: 0
