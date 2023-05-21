@@ -9970,6 +9970,9 @@ MonoBehaviour:
   blinkStartIntervalDecrease: 0.05
   blinkStartIntervalMinimal: 0.1
   color: {r: 1, g: 0.58176094, b: 0.6598322, a: 1}
+  maxSpeed: 10
+  minSpeed: 1
+  speedChange: 1
 --- !u!114 &1905966016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9984,7 +9987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explodeCollider: {fileID: 825598446}
   afterTime: 2
-  radius: 1
+  radius: 1.7
   layerMask:
     serializedVersion: 2
     m_Bits: 640

@@ -19,19 +19,31 @@ public class GameManager : Singleton<GameManager>
     public void returnEgg()
     {
         eggUsedCount--;
-        GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        if (GameObject.FindObjectOfType<EggMenu>())
+        {
+            
+            GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        }
     }
 
     public void useEgg()
     {
         eggUsedCount++;
-        GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        if (GameObject.FindObjectOfType<EggMenu>())
+        {
+            
+            GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        }
     }
 
     public void addMaxCount()
     {
         maxEggCount++;
-        GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        if (GameObject.FindObjectOfType<EggMenu>())
+        {
+            
+            GameObject.FindObjectOfType<EggMenu>() .update(eggUsedCount,maxEggCount);
+        }
     }
     public void restartGame()
     {
