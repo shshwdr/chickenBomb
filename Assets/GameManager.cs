@@ -11,6 +11,11 @@ public class GameManager : Singleton<GameManager>
     private int seed = 0;
     public int maxEggCount = 1;
     public int eggUsedCount = 0;
+    public Vector3 lastSavePoint = Vector3.negativeInfinity;
+    public void savePoint(Vector3 point)
+    {
+        lastSavePoint = point;
+    }
     public void returnEgg()
     {
         eggUsedCount--;

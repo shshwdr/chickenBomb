@@ -10,7 +10,7 @@ public class Singleton<T> : SerializableObject where T : MonoBehaviour
     private static bool m_ShuttingDown = false;
     private static object m_Lock = new object();
     private static T m_Instance;
-    private void Awake()
+    protected virtual void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -61,15 +61,15 @@ public class Singleton<T> : SerializableObject where T : MonoBehaviour
     }
 
 
-    private void OnApplicationQuit()
-    {
-        m_ShuttingDown = true;
-    }
-
-
-    private void OnDestroy()
-    {
-        m_ShuttingDown = true;
-        m_Instance = null;
-    }
+    // private void OnApplicationQuit()
+    // {
+    //     m_ShuttingDown = true;
+    // }
+    //
+    //
+    // private void OnDestroy()
+    // {
+    //     m_ShuttingDown = true;
+    //     m_Instance = null;
+    // }
 }

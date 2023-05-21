@@ -8,8 +8,9 @@ public class EggMenu : Singleton<EggMenu>
 
     public EggCell[] eggCells;
     // Start is called before the first frame update
-    void Awake()
+    protected  override void Awake()
     {
+        base.Awake();
         eggCells = parent.GetComponentsInChildren<EggCell>();
     }
 

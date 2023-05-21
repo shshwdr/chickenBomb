@@ -9678,7 +9678,7 @@ MonoBehaviour:
   StampColorShape: {fileID: 0}
   StampAlphaShape: {fileID: 0}
   StampColor: {r: 1, g: 1, b: 1, a: 1}
-  StampSize: {x: 10, y: 10}
+  StampSize: {x: 12, y: 12}
   StampRandomDirection: 1
   Raycast: 1
   RaycastRadius: 10
@@ -9849,7 +9849,7 @@ Transform:
   m_GameObject: {fileID: 3723624996496661734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -112.97, y: -3.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 825598447}
   m_Father: {fileID: 0}
@@ -9930,7 +9930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.47, y: 1.89}
+  m_Size: {x: 1.2, y: 1.7}
   m_EdgeRadius: 0
 --- !u!50 &3723624996496661754
 Rigidbody2D:

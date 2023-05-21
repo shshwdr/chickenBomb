@@ -187,9 +187,9 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			//m_Grounded = false;
 			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			transform.position = transform.position + Vector3.up * 1.4f;
+			transform.position = transform.position + Vector3.up * 1.6f;
 			//m_Rigidbody2D.MovePosition(transform.position+Vector3.up*2);
-			Instantiate(egg, transform.position- Vector3.up * 1.2f, quaternion.identity);
+			Instantiate(egg, transform.position- Vector3.up * 1.3f, quaternion.identity);
 		}
 	}
 
