@@ -9,10 +9,19 @@ public class Enemy : HPObject
     public float moveRadius;
     public float moveSpeed;
     Rigidbody2D rb;
+    public float moveScaleY = 0.9f;
+    public float moveTransform = 0.1f;
+    public float moveScaleX = 0.7f;
+    public float moveScaleTime = 0.6f;
+    public SpriteRenderer renderPart;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        renderPart. transform.DOScaleY(moveScaleY, moveScaleTime).SetLoops(-1, LoopType.Yoyo);
+        renderPart. transform.DOScaleX(moveScaleX, moveScaleTime).SetLoops(-1, LoopType.Yoyo);
+        renderPart. transform.DOLocalMoveY(renderPart.transform.localPosition.y+moveTransform, moveScaleTime).SetLoops(-1, LoopType.Yoyo);
     }
 
     public override void kill()
@@ -23,10 +32,26 @@ public class Enemy : HPObject
 
     }
 
+
+private float lastX = float.NegativeInfinity;
     // Update is called once per frame
     void Update()
     {
-
+        if (lastX == float.NegativeInfinity)
+        {
+            lastX = transform.position.x;
+            return;
+        }
+        if (transform.position.x >= lastX)
+        {
+            renderPart.flipX = true;
+        }
+        else
+        {
+            
+            renderPart.flipX = false;
+        }
+        lastX = transform.position.x;
     }
     private void FixedUpdate()
     {
