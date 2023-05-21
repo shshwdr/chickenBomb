@@ -9,11 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1831362551688229373, guid: e4738a58bab47064faeaed2867f0d3d9, type: 3}
       propertyPath: m_Name
-      value: flower
+      value: flower Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3319821847406869758, guid: e4738a58bab47064faeaed2867f0d3d9, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319821847406869758, guid: e4738a58bab47064faeaed2867f0d3d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319821847406869758, guid: e4738a58bab47064faeaed2867f0d3d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3319821847406869758, guid: e4738a58bab47064faeaed2867f0d3d9, type: 3}
       propertyPath: m_LocalPosition.x

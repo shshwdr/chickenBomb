@@ -184,29 +184,29 @@ public class PlayerMovement : SerializableObject
             hideTutorial(0);
         }
         animator.SetFloat("speed", speed);
-        if ( Input.GetKeyDown(KeyCode.Space))
+        if ( Input.GetKeyDown(KeyCode.Space) ||Input.GetKeyDown(KeyCode.W) ||Input.GetKeyDown(KeyCode.UpArrow) )
         {
             jump = true;
         };
         
-        float verticalInput = Input.GetAxis("Vertical");
-        if (verticalInput != 0)
-        {
-            Vector3 newPosition = cameraTrans.localPosition;
-            newPosition.y += verticalInput * cameraSpeed * Time.deltaTime;
-            newPosition.y = Mathf.Clamp(newPosition.y, cameraMoveMin,cameraMoveMax);
-            cameraTrans.localPosition = newPosition;
-        }
-        else
-        {
-            Vector3 newPosition = cameraTrans.localPosition;
-            var ydiff = cameraOriginY - newPosition.y;
-            if (Mathf.Abs(ydiff) > 0.1f)
-            {
-                newPosition.y += ydiff * cameraSpeed * Time.deltaTime;
-                cameraTrans.localPosition = newPosition;
-            }
-        }
+        // float verticalInput = Input.GetAxis("Vertical");
+        // if (verticalInput != 0)
+        // {
+        //     Vector3 newPosition = cameraTrans.localPosition;
+        //     newPosition.y += verticalInput * cameraSpeed * Time.deltaTime;
+        //     newPosition.y = Mathf.Clamp(newPosition.y, cameraMoveMin,cameraMoveMax);
+        //     cameraTrans.localPosition = newPosition;
+        // }
+        // else
+        // {
+        //     Vector3 newPosition = cameraTrans.localPosition;
+        //     var ydiff = cameraOriginY - newPosition.y;
+        //     if (Mathf.Abs(ydiff) > 0.1f)
+        //     {
+        //         newPosition.y += ydiff * cameraSpeed * Time.deltaTime;
+        //         cameraTrans.localPosition = newPosition;
+        //     }
+        // }
         //if (Input.GetButtonDown("Crouch"))
         //{
         //    crouch = true;
