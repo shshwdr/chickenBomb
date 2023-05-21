@@ -1,5 +1,7 @@
-﻿using FMOD.Studio;
+﻿using DG.Tweening;
+using FMOD.Studio;
 using FMODUnity;
+using TreeEditor;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,7 +17,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
-
+	public Transform renderPart;
 	public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 
@@ -71,6 +73,7 @@ public class CharacterController2D : MonoBehaviour
 		k_GroundedRadius = m_GroundCheck.GetComponent<CircleCollider2D>().radius * m_GroundCheck.lossyScale.x;
 
 		footstepTime = Random.Range(footstepTimeMin, footstepTimeMax);
+		localY = renderPart.transform.localPosition.y;
 	}
 
 	public void changeParamByName(string paramName,float paramValue)
@@ -114,7 +117,11 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-
+	private bool wasMoving = false;
+	public float moveScale = 0.5f;
+	public float moveTransform = 0.1f;
+	public float moveScaleTime = 0.3f;
+	private float localY = 0;
 	public void Move(float move, bool crouch, bool jump)
 	{
 		// If crouching, check to see if the character can stand up
@@ -164,6 +171,21 @@ public class CharacterController2D : MonoBehaviour
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+
+			if (!wasMoving && math.abs(m_Rigidbody2D.velocity.x)>0.3f)
+			{
+				wasMoving = true;
+				renderPart. transform.DOScaleY(moveScale, moveScaleTime).SetLoops(-1, LoopType.Yoyo);
+				renderPart. transform.DOLocalMoveY(localY+moveTransform, moveScaleTime).SetLoops(-1, LoopType.Yoyo);
+			}
+
+			if (wasMoving && math.abs(m_Rigidbody2D.velocity.x) < 0.1f)
+			{
+				wasMoving = false;
+				renderPart.transform.DOKill();
+				renderPart.transform.localScale = Vector3.one;
+				renderPart.transform.localPosition = new Vector3(0, localY,0);
+			}
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)

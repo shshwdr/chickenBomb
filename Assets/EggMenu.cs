@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EggMenu : Singleton<EggMenu>
+public class EggMenu:MonoBehaviour
 {
     public Transform parent;
 
     public EggCell[] eggCells;
     // Start is called before the first frame update
-    protected  override void Awake()
+    protected  void Awake()
     {
-        base.Awake();
         eggCells = parent.GetComponentsInChildren<EggCell>();
     }
 

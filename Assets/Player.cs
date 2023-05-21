@@ -8,7 +8,7 @@ public class Player : HPObject
     
     private void Start()
     {
-        EggMenu.Instance.update(GameManager.Instance. eggUsedCount,GameManager.Instance. maxEggCount);
+        GameObject.FindObjectOfType<EggMenu>().update(GameManager.Instance. eggUsedCount,GameManager.Instance. maxEggCount);
         if (GameManager.Instance.lastSavePoint.x == float.NegativeInfinity)
         {
             
