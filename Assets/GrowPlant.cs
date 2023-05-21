@@ -8,7 +8,7 @@ public class GrowPlant : MonoBehaviour
     void Start()
     {
 
-        AudioManager.Instance.playPlantGrow();
+        //AudioManager.Instance.playPlantGrow();
     }
 
     // Update is called once per frame

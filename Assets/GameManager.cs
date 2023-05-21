@@ -55,7 +55,7 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     // Start is called before the first frame update
-    void Awake()
+    protected   void Start()
     {
          random = new System.Random(seed);
          DontDestroyOnLoad(gameObject);

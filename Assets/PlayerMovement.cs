@@ -299,7 +299,7 @@ public class PlayerMovement : SerializableObject
 
     public void Die(bool destoryPlayerCollider = true)
     {
-        AudioManager.Instance.playDie();
+        //AudioManager.Instance.playDie();
         isDead = true;
         animator.SetTrigger("die");
         animator.SetBool("jump",false);
@@ -357,7 +357,7 @@ public class PlayerMovement : SerializableObject
     }
     public void Respawn()
     {
-        AudioManager.Instance.playSeedRespawn();
+        //AudioManager.Instance.playSeedRespawn();
         transform.position = activePositions[currentSpawnPoint].transform.position;
         isDead = false;
         isFullyDead = false;

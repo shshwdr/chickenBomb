@@ -202,7 +202,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			sfxManager.Instance.play(sfxManager.Instance.layEgg);
 			GameManager.Instance.useEgg();
-			AudioManager.Instance.playJump();
+			//AudioManager.Instance.playJump();
 			animator.SetBool("jump", true);
 			// Add a vertical force to the player.
 			//m_Grounded = false;
